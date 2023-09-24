@@ -17,6 +17,9 @@
 
     &__social {
         list-style: none;
+        background-color: var(--secondary-shadow);
+        border-radius: 13px ;
+        padding: 1rem 0 1rem 0;
     }
 
     &__linkItems {
@@ -43,7 +46,7 @@
         width: 1px;
         height: 9rem;
         margin: 0px auto;
-        background-color: var(--light-slate);
+        background-color: var(--primary);
         margin-top: 1.3rem;
     }
 }

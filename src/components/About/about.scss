@@ -59,27 +59,9 @@
     }
 
     &__description {
-        color: var(--slate);
+        color: var(--light-slate);
 
-        // &::before {
-        //     content: "<p>";
-        //     font-size: 1.8rem;
-        //     display: block;
-        //     font-family: 'La Belle Aurore', cursive;
-        //     color: #ffd700;
-        //     opacity: 0.7;
-        //     font-weight: 500;
-        // }
-
-        // &::after {
-        //     content: "</p>";
-        //     font-size: 1.8rem;
-        //     font-family: 'La Belle Aurore', cursive;
-        //     color: #ffd700;
-        //     opacity: 0.7;
-        //     display: block;
-        //     font-weight: 500;
-        // }
+       
     }
 
     &__skills {
@@ -121,26 +103,7 @@
         margin-bottom: 1.6rem;
         color: var(--lightest-slate);
 
-        // &::before {
-        //     content: "<h1>";
-        //     font-size: 1.8rem;
-        //     font-family: 'La Belle Aurore', cursive;
-        //     color: #ffd700;
-        //     opacity: 0.7;
-        //     font-weight: 500;
-        //     display: block;
-        // }
-
-        // &::after {
-        //     content: "</h1>";
-        //     font-size: 1.8rem;
-        //     font-family: 'La Belle Aurore', cursive;
-        //     color: #ffd700;
-        //     opacity: 0.7;
-        //     font-weight: 500;
-        //     animation: fadeIn 1s 1.7s backwards;
-        //     display: block;
-        // }
+      
     }
 
     &__link {
@@ -195,7 +158,7 @@
     animation-name: spincube;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 12s;
+    animation-duration: 15s;
     transform-style: preserve-3d;
     transform-origin: 10rem 10rem 0;
     margin-left: calc(50% - 10rem);

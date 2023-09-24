@@ -3,13 +3,13 @@
 <br />
 <div align="center">
   <p align="center">
-    <b>Yash Falke - portfolio</b>
+    <b>Lewis Odero - portfolio</b>
     <br />
     <!-- <a href="https://arcane-retreat-14101.herokuapp.com/">View Demo</a> -->
     <!-- · -->
-    <a href="https://github.com/yashfalke77/portfolio/issues">Report Bug</a>
+    <a href="https://github.com/levos-snr/portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/yashfalke77/portfolio/issues">Request Feature</a>
+    <a href="https://github.com/levos-snr/portfolio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -17,19 +17,17 @@
 
 ## About The Project
 
-Hello! My name is Yash Falke and this is my portfolio .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+Hello! My name is Lewis Odero and this is my portfolio .I’m a Fullstack Developer located in Kenya and I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
 
 ### Project Images
 
 #### Home Page
 
-<img src="./project screenshots/2.png" alt="Logo" >
-
-#### contact page
-
 <img src="./project screenshots/1.png" alt="Logo" >
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- #### contact page
+
+<img src="./project screenshots/1.png" alt="Logo" > -->
 
 # Portfolio
 
@@ -51,3 +49,5 @@ My Portfolio made using react-vite
 - Run the below command for the production mode.
 
   `portfolio: $ npm run build`
+
+  <p align="right">(<a href="#top">back to top</a>)</p>

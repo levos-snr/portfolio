@@ -1,0 +1,149 @@
+@import '../../scss/_variables.scss';
+.NavbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px var(--primary);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+  width: 95%;
+  height: 80px;
+  border-radius: 13px;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+}
+
+.NavbarItems .ImgLogo img {
+  height: 7rem;
+}
+
+.ImgLogo {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: var(--light-blue);
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.nav-links i {
+  padding-right: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.nav-links:hover {
+  text-decoration-line: underline;
+  text-underline-offset: 6px;
+}
+
+.fa-bars,
+.fa-times {
+  color: var(--primary);
+   font-size: 3rem;
+}
+
+.menu-burger {
+  display: none;
+}
+
+.nav-links-mobile {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  background-color: var(--light-blue);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.nav-links-mobile:hover {
+  background-color: var(--primary);
+}
+
+@media screen and (max-width: 850px) {
+  .NavbarItems {
+    z-index: 99;
+    
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* From https://css.glass */
+    background: rgba(13, 7, 66, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px var(--primary);
+    backdrop-filter: blur(12.3px);
+    -webkit-backdrop-filter: blur(12.3px);
+    border-radius: 13px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    left: 0%;
+  }
+
+  .nav-links {
+    display: block;
+    widows: 100%;
+    padding: 2rem 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .nav-links:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+    backdrop-filter: blur(20px);
+  }
+  .menu-burger {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-links-mobile {
+    padding: 1.5rem;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+  }
+}

@@ -1,56 +1,38 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-import './navbar.scss';
+import React, { useState } from 'react';
+import './Navbar.css';
+import MenuData, { MenuItem } from './MenuData';
 
-const Navbar = () => (
-  <nav className='navbar'>
-    <div className='navbar__left'>
-      <Link to='/' className='navbar__link'>
-        <img
-          alt='logo'
-          src='/src/assets/images/leo.png'
-          className='navbar__img'
-        />
-      </Link>
-    </div>
-    <div className='navbar__right'>
-      <ul className='navbar__list'>
-        <li className='navbar__items'>
-          <HashLink to='/#about' className='navbar__itemsLink'>
-            <span className='navbar__itemsLinkNumeric'>01.</span>
-            About
-          </HashLink>
-        </li>
-        <li className='navbar__items'>
-          <HashLink to='/#projects' className='navbar__itemsLink'>
-            <span className='navbar__itemsLinkNumeric'>02.</span>
-            Projects
-          </HashLink>
-        </li>
-        <li className='navbar__items'>
-          <HashLink to='/#work' className='navbar__itemsLink'>
-            <span className='navbar__itemsLinkNumeric'>03.</span>
-            Work
-          </HashLink>
-        </li>
-        <li className='navbar__items'>
-          <NavLink to='/contact' className='navbar__itemsLink'>
-            <span className='navbar__itemsLinkNumeric'>04.</span>
-            Contact
-          </NavLink>
-        </li>
+interface NavbarState {
+  clicked: boolean;
+}
+
+const Navbar: React.FC = () => {
+  const [state, setState] = useState<NavbarState>({ clicked: false });
+
+  const handleClick = () => {
+    setState((prevState) => ({ clicked: !prevState.clicked }));
+  };
+
+  return (
+    <nav className='NavbarItems'>
+      <div className='ImgLogo'>
+        <img src='/src/assets/images/levos.png' alt='Logo' />
+      </div>
+      <div className='menu-burger' onClick={handleClick}>
+        <i className={state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
+      </div>
+      <ul className={state.clicked ? 'nav-menu active' : 'nav-menu'}>
+        {MenuData.map((item: MenuItem, index: number) => (
+          <li key={index}>
+            <a href={item.url} className={item.cName}>
+              {item.icon && <i className={item.icon} />}
+              {item.title}
+            </a>
+          </li>
+        ))}
       </ul>
-      <a
-        href='https://drive.google.com/file/d/1SArkoqiFxn9qevyzhdjTVBb6oJnRb6F_/view?usp=sharing'
-        target='_blank'
-        rel='noreferrer'
-        className='navbar__button'
-      >
-        Resume
-      </a>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Navbar;
